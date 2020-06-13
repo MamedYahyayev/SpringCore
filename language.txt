@@ -1,0 +1,4 @@
+sican--mouse
+kitab--book
+masin--car
+telefon--phone

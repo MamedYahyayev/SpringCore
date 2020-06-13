@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+	<!-- <bean id="welcome" class="az.maqa.project.Welcome"></bean> -->
+
+	<!-- <bean id="classRoom" class="az.maqa.project.ClassRoom"></bean> -->
+
+	<bean id="math" class="az.maqa.project.MathImplements">
+
+	</bean>
+
+	<bean id="fileReader" class="az.maqa.project.FileReaderMethod">
+		<!-- <property name="file" value = "language.txt"></property> -->
+		<constructor-arg value="language.txt"></constructor-arg>
+	</bean>
+
+	<bean id="message" class="az.maqa.project.Message"></bean>
+
+
+	<bean id="database" class="az.maqa.project.Database">
+		<constructor-arg index="0" value="localhost"></constructor-arg>
+		<constructor-arg index="1" value="mamed"></constructor-arg>
+		<constructor-arg index="2" value="mamed2001"></constructor-arg>
+	</bean>
+
+
+	<bean id="dao" class="az.maqa.project.Dao" autowire="constructor"
+		init-method="welcomeMessage" destroy-method="byeByeMessage">
+	</bean>
+
+</beans> 
